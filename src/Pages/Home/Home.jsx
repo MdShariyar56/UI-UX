@@ -2,7 +2,6 @@ import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBehance } from "@fortawesome/free-brands-svg-icons";
 import { Mail, Instagram, Linkedin, Facebook } from "lucide-react";
-import profileImg from '../../assets/Group 39 (1).png'
 const Home = () => {
     return (
         <div>
@@ -103,7 +102,7 @@ const Home = () => {
         {/* Image */}
         <div className="flex-1 mt-8 md:mt-5 flex justify-center md:justify-end">
           <img
-            src={profileImg}
+            src="https://i.ibb.co/nsq3kZnL/Group-39-1.png"
             alt="Shariyar Kobir"
             className="w-96  h-auto rounded-full  transition-transform duration-300 hover:scale-105"
           />
