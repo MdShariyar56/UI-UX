@@ -1,10 +1,16 @@
-
 import React from "react";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
+
 
 const Navbar = () => {
+  const linkStyle =
+    "px-4 py-2 border rounded-full border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white transition-all";
+
+  const activeStyle =
+    "bg-blue-400 text-white border-blue-400 shadow-[0_0_10px_#00D9FF]"; // ✅ Active হলে এই স্টাইল
+
   return (
-    <nav className="fixed top-0 left-0 w-full bg-black/50 z-50">
+    <nav className="fixed top-0 left-0 w-full bg-black/50 z-50 backdrop-blur-md">
       <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-4">
         <img
           src="https://i.ibb.co/KxXD9mh0/logo-8-1.png"
@@ -14,44 +20,55 @@ const Navbar = () => {
 
         <ul className="flex gap-4">
           <li>
-            <Link
+            <NavLink
               to="/"
-              className="px-4 py-2 border rounded-full border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white transition-all"
+              end
+              className={({ isActive }) =>
+                isActive ? `${linkStyle} ${activeStyle}` : linkStyle
+              }
             >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/about"
-              className="px-4 py-2 border rounded-full border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white transition-all"
+              className={({ isActive }) =>
+                isActive ? `${linkStyle} ${activeStyle}` : linkStyle
+              }
             >
               About
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/skills"
-              className="px-4 py-2 border rounded-full border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white transition-all"
+              className={({ isActive }) =>
+                isActive ? `${linkStyle} ${activeStyle}` : linkStyle
+              }
             >
               Skills
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/service"
-              className="px-4 py-2 border rounded-full border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white transition-all"
+              className={({ isActive }) =>
+                isActive ? `${linkStyle} ${activeStyle}` : linkStyle
+              }
             >
               Services
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/contact"
-              className="px-4 py-2 border rounded-full border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white transition-all"
+              className={({ isActive }) =>
+                isActive ? `${linkStyle} ${activeStyle}` : linkStyle
+              }
             >
               Contact
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>
