@@ -1,7 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import LoadingSpinner from "../../Component/LoadingSpeaner/LoadingSpeaner";
 
 const MyService = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  // Background image preloader
+  useEffect(() => {
+    const img = new Image();
+    img.src = "https://i.ibb.co/GvN78L4k/Group-31.png";
+    img.onload = () => setLoading(false);
+  }, []);
+
+  if (loading) return <LoadingSpinner />; // Loader দেখাবে যতক্ষণ background load হচ্ছে
 
   const services = [
     {
@@ -23,10 +34,8 @@ const MyService = () => {
 
   return (
     <div
-      className="hero min-h-screen bg-fixed bg-center bg-cover relative"
-      style={{
-        backgroundImage: "url('https://i.ibb.co/GvN78L4k/Group-31.png')",
-      }}
+      className="hero min-h-screen bg-fixed bg-center bg-cover relative transition-all duration-700"
+      style={{ backgroundImage: "url('https://i.ibb.co/GvN78L4k/Group-31.png')" }}
     >
       <div className="hero-content text-neutral-content text-center relative z-10 py-10 px-4">
         <div className="max-w-6xl mx-auto">
