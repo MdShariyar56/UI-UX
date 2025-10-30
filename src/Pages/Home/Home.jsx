@@ -10,7 +10,7 @@ const Home = () => {
 
                  id="home"
          className="h-screen  py-20 p-4 flex flex-col items-center  bg-cover bg-center"
-         style={{ backgroundImage: `url('https://i.ibb.co.com/VY5dshYJ/Group-34.png')` }}
+         style={{ backgroundImage: `url('https://i.ibb.co/VY5dshYJ/Group-34.png')` }}
 
     >
       <div className="flex flex-col md:flex-row md:space-x-6 items-center max-w-6xl w-full px-4 mt-10">

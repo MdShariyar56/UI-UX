@@ -7,7 +7,7 @@ const About = () => {
     <div
       className="hero min-h-screen bg-cover bg-center"
       style={{
-        backgroundImage: "url(https://i.ibb.co/jvS5T8j4/Group-33.png)",
+        backgroundImage: `url('https://i.ibb.co/jvS5T8j4/Group-33.png')`
       }}
     >
       <div className="hero-content flex flex-col lg:flex-row gap-10 items-start p-4 lg:p-0">
